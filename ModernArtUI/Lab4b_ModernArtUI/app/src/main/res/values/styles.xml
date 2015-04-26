@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:alertDialogStyle">@style/CustomDialogTheme</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:bottomBright">@color/grey</item>
+        <item name="android:bottomDark">@color/grey</item>
+        <item name="android:bottomMedium">@color/grey</item>
+        <item name="android:centerBright">@color/grey</item>
+        <item name="android:centerDark">@color/grey</item>
+        <item name="android:centerMedium">@color/grey</item>
+        <item name="android:fullBright">@color/ltgrey</item>
+        <item name="android:fullDark">@color/ltgrey</item>
+        <item name="android:topBright">@color/ltgrey</item>
+        <item name="android:topDark">@color/ltgrey</item>
+    </style>
+
+</resources>
