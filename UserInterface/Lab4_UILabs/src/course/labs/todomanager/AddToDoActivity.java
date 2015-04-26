@@ -90,26 +90,24 @@ public class AddToDoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-
-
-				// TODO - Indicate result and finish
-
-                
-                
+				// Indicate result and finish
+				setResult(RESULT_CANCELED);
+				
+				finish();                              
 			}
 		});
 
-		// TODO - Set up OnClickListener for the Reset Button
+		// Set up OnClickListener for the Reset Button
 		final Button resetButton = (Button) findViewById(R.id.resetButton);
 		resetButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
 
-				// TODO - Reset data to default values
-
-
-                
+				// Reset data to default values
+				mDefaultPriorityButton.setChecked(true);
+				mDefaultStatusButton.setChecked(true);
+				mTitleText.setText("");            
                 
                 
 				// reset date and time
@@ -129,16 +127,14 @@ public class AddToDoActivity extends Activity {
 				// gather ToDoItem data
 
 
-				// TODO - Get the current Priority
-				Priority priority = null;
+				// Get the current Priority
+				Priority priority = getPriority();
 
-				// TODO - Get the current Status
-				Status status = null;
+				// Get the current Status
+				Status status = getStatus();
 
-				// TODO - Get the current ToDoItem Title
-
-
-				String titleString = null;
+				// Get the current ToDoItem Title
+				String titleString = getToDoTitle();
 
 
 				// Construct the Date string
@@ -149,12 +145,10 @@ public class AddToDoActivity extends Activity {
 				ToDoItem.packageIntent(data, titleString, priority, status,
 						fullDate);
 
-				// TODO - return data Intent and finish
-
-
-
-
-            
+				// return data Intent and finish
+				setResult(RESULT_OK, data);
+				
+				finish();
             
 			}
 		    });
@@ -181,7 +175,7 @@ public class AddToDoActivity extends Activity {
 
 		timeView.setText(timeString);
 	}
-
+	
 	private static void setDateString(int year, int monthOfYear, int dayOfMonth) {
 
 		// Increment monthOfYear for Calendar/Date -> Time Format setting
@@ -222,7 +216,7 @@ public class AddToDoActivity extends Activity {
 			return Priority.MED;
 		}
 		}
-	}
+	}	
 
 	private Status getStatus() {
 
