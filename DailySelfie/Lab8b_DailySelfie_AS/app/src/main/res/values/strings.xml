@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Daily Selfie</string>
+    <string name="menu_camera_label">Take Selfie</string>
+    <string name="title_activity_daily_selfie_fullsceen">Daily Selfie</string>
+</resources>

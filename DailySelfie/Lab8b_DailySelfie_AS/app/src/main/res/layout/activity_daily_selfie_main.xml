@@ -1,0 +1,8 @@
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout="@layout/fragment_daily_selfie_main"
+    android:id="@+id/fragment"
+    android:name="dk.mortennp.lab8b_dailyselfie_as.DailySelfieMainActivityFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
